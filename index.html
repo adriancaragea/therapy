@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Diana Caragea</title>
+  <title>Diana Caragea — Psychoanalysis</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Pinyon+Script&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     * {
@@ -12,272 +19,143 @@
       padding: 0;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
       min-height: 100vh;
-      font-family: Georgia, "Times New Roman", serif;
-      background: #f4efe7;
-      color: #273026;
+      background: #efe9df;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px;
+      padding: 24px;
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      color: #2d332c;
     }
 
     .page {
+      position: relative;
       width: 100%;
       max-width: 1200px;
-      min-height: 720px;
-      background:
-        radial-gradient(circle at 75% 30%, rgba(157, 160, 132, 0.35), transparent 22%),
-        linear-gradient(120deg, #fbf7ef 0%, #eee5d8 100%);
-      border-radius: 28px;
+      aspect-ratio: 3 / 2;
+      background: url("background.png") center / cover no-repeat;
+      border-radius: 18px;
       box-shadow: 0 30px 80px rgba(45, 38, 28, 0.18);
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      position: relative;
+      container-type: inline-size;
     }
 
-    .content {
-      padding: 80px 70px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .page p {
+      position: absolute;
+      left: 30.5%;
+      transform: translateX(-50%);
+      margin: 0;
       text-align: center;
-      z-index: 2;
-    }
-
-    .symbol {
-      width: 86px;
-      height: 86px;
-      margin: 0 auto 28px;
-      border: 1px solid #9b8263;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 54px;
-      color: #8a6f50;
     }
 
     .eyebrow {
-      letter-spacing: 8px;
-      font-size: 14px;
-      margin-bottom: 14px;
+      top: 22%;
+      left: 29%;
+      font-family: "Cinzel", serif;
+      letter-spacing: 0.55em;
+      font-size: 1.15cqw;
+      color: #2d332c;
+      text-indent: 0.55em;
+      white-space: nowrap;
     }
 
     .subtitle {
-      letter-spacing: 5px;
-      font-size: 12px;
+      top: 27%;
+      font-family: "Cinzel", serif;
+      letter-spacing: 0.4em;
+      font-size: 0.8cqw;
       color: #6c665d;
-      margin-bottom: 56px;
       text-transform: uppercase;
+      text-indent: 0.4em;
+      white-space: nowrap;
     }
 
-    h1 {
-      font-size: clamp(46px, 6vw, 82px);
-      line-height: 0.95;
-      font-weight: 400;
+    .headline {
+      top: 33%;
+      font-family: "Cinzel", serif;
+      font-weight: 500;
+      font-size: 3.4cqw;
+      line-height: 1.05;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      letter-spacing: 4px;
-      margin-bottom: 36px;
-    }
-
-    .divider {
-      width: 70%;
-      height: 1px;
-      background: #b89d77;
-      margin: 0 auto 38px;
-      position: relative;
-    }
-
-    .divider::after {
-      content: "◇";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -52%);
-      background: #f8f2e9;
-      padding: 0 14px;
-      color: #9b8263;
-      font-size: 18px;
-    }
-
-    .message {
-      font-size: clamp(22px, 2.3vw, 34px);
-      line-height: 1.35;
+      width: 44%;
       color: #2d332c;
+    }
+
+    .lead {
+      top: 61%;
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 1.5cqw;
+      color: #2d332c;
+      white-space: nowrap;
     }
 
     .name {
-      display: block;
-      font-size: clamp(48px, 5vw, 76px);
+      top: 64%;
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 4.4cqw;
+      letter-spacing: 0.01em;
       color: #8a6f50;
-      margin-top: 6px;
+      line-height: 1;
+      white-space: nowrap;
     }
 
     .here {
-      display: inline-block;
-      font-family: "Brush Script MT", cursive;
-      font-size: clamp(42px, 4vw, 68px);
+      top: 72%;
+      font-family: "Pinyon Script", "Brush Script MT", cursive;
+      font-size: 2.6cqw;
       color: #2d332c;
-      margin-top: -8px;
-    }
-
-    .visual {
-      position: relative;
-      background: rgba(255, 255, 255, 0.16);
+      line-height: 1;
       display: flex;
-      align-items: end;
+      align-items: center;
       justify-content: center;
-      padding: 60px;
+      gap: 1.2cqw;
+      width: 22%;
     }
 
-    .head {
-      position: absolute;
-      top: 115px;
-      left: 120px;
-      width: 220px;
-      height: 300px;
-      border-left: 3px solid #263026;
-      border-radius: 50% 0 0 50%;
-      transform: rotate(8deg);
-      opacity: 0.85;
-    }
-
-    .head::before {
+    .here::before,
+    .here::after {
       content: "";
-      position: absolute;
-      top: 70px;
-      left: -35px;
-      width: 70px;
-      height: 90px;
-      border-left: 2px solid #263026;
-      border-radius: 50%;
-    }
-
-    .leaf {
-      position: absolute;
-      top: 210px;
-      left: 230px;
-      width: 2px;
-      height: 220px;
-      background: #263026;
-      transform: rotate(-14deg);
-      opacity: 0.75;
-    }
-
-    .leaf span {
-      position: absolute;
-      width: 42px;
-      height: 18px;
-      border: 1px solid #263026;
-      border-radius: 50%;
-      transform: rotate(-35deg);
-      background: transparent;
-    }
-
-    .leaf span:nth-child(1) { top: 25px; left: 5px; }
-    .leaf span:nth-child(2) { top: 68px; right: 5px; transform: rotate(35deg); }
-    .leaf span:nth-child(3) { top: 112px; left: 6px; }
-    .leaf span:nth-child(4) { top: 154px; right: 4px; transform: rotate(35deg); }
-
-    .couch {
-      width: 470px;
-      height: 150px;
-      background: #263026;
-      border-radius: 90px 90px 24px 24px;
-      position: relative;
-      margin-bottom: 70px;
-      box-shadow: inset 0 0 0 2px rgba(255,255,255,0.08);
-    }
-
-    .couch::before {
-      content: "";
-      position: absolute;
-      right: 10px;
-      top: -105px;
-      width: 170px;
-      height: 160px;
-      background: #263026;
-      border-radius: 90px 90px 20px 20px;
-      transform: rotate(20deg);
-    }
-
-    .couch::after {
-      content: "";
-      position: absolute;
-      left: 45px;
-      right: 45px;
-      top: 55px;
+      flex: 1;
       height: 1px;
-      background: rgba(255,255,255,0.25);
-      box-shadow:
-        80px 0 rgba(255,255,255,0.15),
-        160px 0 rgba(255,255,255,0.15),
-        240px 0 rgba(255,255,255,0.15);
+      background: #b89d77;
     }
-
-    .leg {
-      position: absolute;
-      bottom: -55px;
-      width: 18px;
-      height: 60px;
-      background: #5a3d25;
-      border-radius: 8px;
-    }
-
-    .leg.one { left: 70px; }
-    .leg.two { right: 70px; }
 
     .quote {
-      position: absolute;
-      left: 70px;
-      bottom: 40px;
-      max-width: 440px;
-      font-size: 18px;
-      line-height: 1.5;
+      top: 86%;
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 1.3cqw;
+      line-height: 1.45;
       color: #49463f;
-      opacity: 0.85;
+      width: 30%;
     }
 
-    .quote span {
-      display: block;
-      margin-top: 12px;
+    .quote-author {
+      top: 95%;
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 0.9cqw;
       color: #8a6f50;
-      font-size: 15px;
+      white-space: nowrap;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       body {
-        padding: 20px;
+        padding: 12px;
       }
 
       .page {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
-
-      .content {
-        padding: 60px 28px;
-      }
-
-      .visual {
-        min-height: 360px;
-      }
-
-      .head,
-      .leaf {
-        opacity: 0.35;
-      }
-
-      .quote {
-        display: none;
-      }
-
-      .couch {
-        width: 320px;
-        height: 110px;
+        border-radius: 10px;
+        box-shadow: 0 14px 40px rgba(45, 38, 28, 0.15);
       }
     }
   </style>
@@ -285,43 +163,14 @@
 
 <body>
   <main class="page">
-    <section class="content">
-      <div class="symbol">Ψ</div>
-
-      <div class="eyebrow">PSYCHOANALYSIS</div>
-      <div class="subtitle">Listen · Understand · Transform</div>
-
-      <h1>Website is Under Construction</h1>
-
-      <div class="divider"></div>
-
-      <p class="message">
-        Soon you will be able to reach
-        <span class="name">Diana Caragea</span>
-        <span class="here">here</span>
-      </p>
-    </section>
-
-    <section class="visual" aria-hidden="true">
-      <div class="head"></div>
-
-      <div class="leaf">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <div class="couch">
-        <div class="leg one"></div>
-        <div class="leg two"></div>
-      </div>
-    </section>
-
-    <div class="quote">
-      “The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed.”
-      <span>— Carl Gustav Jung</span>
-    </div>
+    <p class="eyebrow">PSYCHOANALYSIS</p>
+    <p class="subtitle">Listen · Understand · Transform</p>
+    <p class="headline">Website is Under<br />Construction</p>
+    <p class="lead">Soon you will be able to reach</p>
+    <p class="name">Diana Caragea</p>
+    <p class="here">here</p>
+    <p class="quote">“The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed.”</p>
+    <p class="quote-author">— Carl Gustav Jung</p>
   </main>
 </body>
 </html>

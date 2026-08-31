@@ -1,176 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Diana Caragea — Psychoanalysis</title>
+  <title>Întâlnirea cu Sinele — Psih. Diana Caragea</title>
+  <meta name="description" content="Cabinet de psihoterapie de orientare psihanalitică relațională. Diana Caragea, psiholog clinician în supervizare. Anxietate, depresie, relații și sănătate mintală perinatală." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Pinyon+Script&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      height: 100%;
-    }
-
-    body {
-      min-height: 100vh;
-      background: #efe9df;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-      color: #2d332c;
-    }
-
-    .page {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      aspect-ratio: 3 / 2;
-      background: url("background.png") center / cover no-repeat;
-      border-radius: 18px;
-      box-shadow: 0 30px 80px rgba(45, 38, 28, 0.18);
-      container-type: inline-size;
-    }
-
-    .page p {
-      position: absolute;
-      left: 30.5%;
-      transform: translateX(-50%);
-      margin: 0;
-      text-align: center;
-    }
-
-    .eyebrow {
-      top: 22%;
-      left: 29%;
-      font-family: "Cinzel", serif;
-      letter-spacing: 0.55em;
-      font-size: 1.15cqw;
-      color: #2d332c;
-      text-indent: 0.55em;
-      white-space: nowrap;
-    }
-
-    .subtitle {
-      top: 27%;
-      font-family: "Cinzel", serif;
-      letter-spacing: 0.4em;
-      font-size: 0.8cqw;
-      color: #6c665d;
-      text-transform: uppercase;
-      text-indent: 0.4em;
-      white-space: nowrap;
-    }
-
-    .headline {
-      top: 33%;
-      font-family: "Cinzel", serif;
-      font-weight: 500;
-      font-size: 3.4cqw;
-      line-height: 1.05;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      width: 44%;
-      color: #2d332c;
-    }
-
-    .lead {
-      top: 61%;
-      font-family: "Cormorant Garamond", serif;
-      font-style: italic;
-      font-size: 1.5cqw;
-      color: #2d332c;
-      white-space: nowrap;
-    }
-
-    .name {
-      top: 64%;
-      font-family: "Cormorant Garamond", serif;
-      font-style: italic;
-      font-weight: 500;
-      font-size: 4.4cqw;
-      letter-spacing: 0.01em;
-      color: #8a6f50;
-      line-height: 1;
-      white-space: nowrap;
-    }
-
-    .here {
-      top: 72%;
-      font-family: "Pinyon Script", "Brush Script MT", cursive;
-      font-size: 2.6cqw;
-      color: #2d332c;
-      line-height: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1.2cqw;
-      width: 22%;
-    }
-
-    .here::before,
-    .here::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: #b89d77;
-    }
-
-    .quote {
-      top: 86%;
-      font-family: "Cormorant Garamond", serif;
-      font-style: italic;
-      font-size: 1.3cqw;
-      line-height: 1.45;
-      color: #49463f;
-      width: 30%;
-    }
-
-    .quote-author {
-      top: 95%;
-      font-family: "Cormorant Garamond", serif;
-      font-style: italic;
-      font-size: 0.9cqw;
-      color: #8a6f50;
-      white-space: nowrap;
-    }
-
-    @media (max-width: 700px) {
-      body {
-        padding: 12px;
-      }
-
-      .page {
-        border-radius: 10px;
-        box-shadow: 0 14px 40px rgba(45, 38, 28, 0.15);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <main class="page">
-    <p class="eyebrow">PSYCHOANALYSIS</p>
-    <p class="subtitle">Listen · Understand · Transform</p>
-    <p class="headline">Website is Under<br />Construction</p>
-    <p class="lead">Soon you will be able to reach</p>
-    <p class="name">Diana Caragea</p>
-    <p class="here">here</p>
-    <p class="quote">“The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed.”</p>
-    <p class="quote-author">— Carl Gustav Jung</p>
+  <header class="site-header" id="siteHeader">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="brand__name">Intalnirea cu sinele</span>
+        <span class="brand__role">Psih. Diana Caragea</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigare principală">
+        <ul>
+          <li><a href="despre-mine.html">Despre mine</a></li>
+          <li><a href="cum-incepe-schimbarea.html">Cum începe schimbarea</a></li>
+          <li><a href="sanatate-mintala-perinatala.html">Sănătatea mintală perinatală</a></li>
+          <li><a href="resurse.html">Resurse</a></li>
+          <li><a class="nav-cta" href="prima-intalnire.html">Prima întâlnire</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ IMAGINE PRINCIPALĂ ============ -->
+    <section class="hero-image" aria-label="Imagine principală">
+      <!-- POZA PRINCIPALĂ — înlocuiește placeholderul cu:
+           <img src="images/hero.jpg" alt="Descrierea imaginii" width="2400" height="1200" /> -->
+      <div class="placeholder" role="img" aria-label="Imagine principală (de adăugat)">
+        <span class="media-label">(POZA PRINCIPALĂ)</span>
+      </div>
+    </section>
+
+    <!-- ============ 1. ÎNTÂLNIREA CU SINELE ============ -->
+    <section class="section section--hero" id="intalnirea-cu-sinele" aria-labelledby="hero-title">
+      <div class="hero-band">
+        <div class="wrap hero-grid">
+          <div class="hero-grid__text">
+            <p class="label rise" style="--d: 0.1s">Întâlnirea cu Sinele</p>
+            <h1 class="rise" id="hero-title" style="--d: 0.25s">Uneori trecutul nu e la timpul trecut.</h1>
+            <p class="hero__sub rise" style="--d: 0.45s">E la prezentul continuu.</p>
+
+            <div class="prose text-sm">
+              <p class="reveal">
+                Ni se întâmplă adesea ca ceea ce am trăit cândva să nu rămână, de fapt, în urmă. Ci să se
+                manifeste în continuare discret, din umbră, și să influențeze felul în care gândim, simțim,
+                reacționăm și ne raportăm la ceilalți.
+              </p>
+              <p class="reveal" style="--d: 0.08s">
+                Dar tocmai pentru că este încă „în acțiune”, trecutul poate fi privit din nou, înțeles diferit
+                și elaborat. Cu timp și sprijin, relația cu trecutul se poate transforma - iar prezentul poate
+                deveni mai liber.
+              </p>
+
+              <div class="actions reveal" style="--d: 0.16s">
+                <a class="btn btn--primary" href="prima-intalnire.html">Începe cu o primă întâlnire</a>
+              </div>
+
+              <p class="callout reveal" style="--d: 0.24s">
+                <strong>Nu trebuie să știi deja toate răspunsurile.</strong>
+                Este suficient să simți că vrei să înțelegi mai bine ceea ce trăiești.
+              </p>
+
+              <div class="actions reveal" style="--d: 0.3s">
+                <a class="btn btn--ghost" href="cum-incepe-schimbarea.html">
+                  Descoperă cum începe schimbarea <span class="btn__arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <figure class="media reveal" style="--d: 0.2s">
+            <div class="blob">
+              <!-- POZA AUTOPILOT — înlocuiește placeholderul cu:
+                   <img src="images/autopilot.jpg" alt="Descrierea imaginii" width="1200" height="1500" /> -->
+              <div class="placeholder" role="img" aria-label="Imagine: pilot automat (de adăugat)">
+                <span class="media-label">(POZA AUTOPILOT)</span>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- ============ 2. SĂNĂTATEA MINTALĂ PERINATALĂ ============ -->
+    <section class="section" id="perinatal" aria-labelledby="perinatal-title">
+      <div class="wrap">
+        <div class="panel reveal">
+          <div class="section__head">
+            <p class="label reveal" style="--d: 0.06s">Sănătatea mintală perinatală</p>
+            <h2 class="h2 reveal" id="perinatal-title" style="--d: 0.12s">
+              Sarcina și maternitatea: schimbările despre care se vorbește prea puțin
+            </h2>
+          </div>
+
+          <div class="prose">
+            <p class="reveal" style="--d: 0.18s">
+              Perioada perinatală cuprinde <strong>sarcina și primul an după naștere</strong>. Dincolo de
+              schimbările firești ale corpului și ale vieții de familie, această perioadă poate aduce cu sine
+              una dintre <strong>cele mai profunde reorganizări psihice din viața unei femei</strong>. În
+              această etapă pot deveni mai vizibile experiențe, relații și conflicte inconștiente care
+              influențează felul în care este trăită maternitatea și relația cu sine, cu copilul și cu cei din
+              jur.
+            </p>
+            <p class="reveal" style="--d: 0.24s">
+              Înțelegerea propriei istorii poate schimba felul în care te raportezi la tine, la maternitate și
+              la copilul tău.
+            </p>
+
+            <div class="actions reveal" style="--d: 0.3s">
+              <a class="btn btn--ghost" href="sanatate-mintala-perinatala.html">
+                Citește despre sănătatea mintală perinatală
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- ============ 3. CÂND SIMȚI CĂ AI NEVOIE DE SPRIJIN ============ -->
+    <section class="section" id="sprijin" aria-labelledby="sprijin-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="label reveal">Când simți că ai nevoie de sprijin</p>
+          <h2 class="h2-lg reveal" id="sprijin-title" style="--d: 0.08s">
+            Simptomul este începutul unei întrebări. Răspunsul îl găsim în povestea fiecărei persoane.
+          </h2>
+        </div>
+
+        <div class="prose">
+          <p class="reveal" style="--d: 0.14s">
+            Suferința psihică poate lua multe forme: anxietate, atacuri de panică, stări depresive, dificultăți
+            în relații, dependență emoțională, perfecționism, rușine, vinovăție sau sentimentul că nu te mai
+            regăsești pe tine însuți. Poate traversezi o despărțire, un doliu, o schimbare importantă ori simți
+            nevoia de a te cunoaște mai profund.
+          </p>
+          <p class="reveal" style="--d: 0.2s">
+            În abordarea psihanalitică, aceste experiențe <strong>nu sunt privite ca simptome care trebuie
+            înlăturate</strong>, ci ca expresii ale lumii tale interioare care încearcă să fie înțeleasă.
+            Atunci când aceste experiențe încep să capete sens, apare posibilitatea unei schimbări care merge
+            dincolo de alinarea de moment.
+          </p>
+
+          <div class="actions reveal" style="--d: 0.26s">
+            <a class="btn btn--ghost" href="cum-incepe-schimbarea.html">
+              Cum începe schimbarea <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- ============ 4. DESPRE MINE ============ -->
+    <section class="section" id="despre-mine" aria-labelledby="despre-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="label reveal" style="font-size: var(--fs-body)">Despre mine</p>
+          <h2 class="h2 reveal" id="despre-title" style="--d: 0.08s">Fiecare om are propria poveste.</h2>
+        </div>
+
+        <div class="prose">
+          <p class="reveal" style="--d: 0.14s">
+            Sunt <strong>Diana Caragea</strong> - psiholog clinician în supervizare și psihoterapeut în formare
+            de orientare psihanalitică relațională, membră a Colegiului Psihologilor din România
+            (RUP&nbsp;34733).
+          </p>
+
+          <div class="actions reveal" style="--d: 0.2s">
+            <a class="btn btn--ghost btn--lg" href="despre-mine.html">Parcursul meu profesional</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRIMUL PAS ============ -->
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="wrap wrap--narrow">
+        <h2 class="h2 reveal" id="closing-title">
+          Primul pas nu este să ai toate răspunsurile - este să ai un loc în care întrebările tale să poată fi
+          ascultate.
+        </h2>
+        <p class="closing__note reveal" style="--d: 0.08s">
+          Nu este nevoie să formulezi perfect ceea ce trăiești. Putem începe de acolo de unde ești acum.
+        </p>
+
+        <div class="actions reveal" style="--d: 0.14s">
+          <a class="btn btn--sm" href="prima-intalnire.html">Stabilește o primă întâlnire</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <p class="brand__name">Diana Caragea</p>
+        <p>Psiholog clinician în supervizare<br />Psihoterapeut în formare — psihanaliză relațională</p>
+        <p>Colegiul Psihologilor din România — RUP&nbsp;34733</p>
+      </div>
+
+      <nav aria-label="Navigare secundară">
+        <ul>
+          <li><a href="despre-mine.html">Despre mine</a></li>
+          <li><a href="cum-incepe-schimbarea.html">Cum începe schimbarea</a></li>
+          <li><a href="sanatate-mintala-perinatala.html">Sănătatea mintală perinatală</a></li>
+          <li><a href="resurse.html">Resurse</a></li>
+          <li><a href="prima-intalnire.html">Prima întâlnire</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__contact">
+        <p class="h3">Contact</p>
+        <p>
+          <a href="tel:+40724520024">0724 520 024</a><br />
+          SMS / WhatsApp
+        </p>
+        <p>
+          Strada Elena Caragiani nr. 8<br />
+          București, 014213 — zona Aviației
+        </p>
+        <p>Ședințe în cabinet sau online.</p>
+
+        <!-- TODO: înlocuiește cu adresa reală a contului de Instagram -->
+        <a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+           aria-label="Instagram (profilul se deschide într-o filă nouă)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none" />
+          </svg>
+        </a>
+      </div>
+
+      <p class="site-footer__legal">© 2026 Diana Caragea</p>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
 </body>
 </html>

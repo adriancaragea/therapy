@@ -22,10 +22,14 @@
   /* Helvetica throughout. The source documents' point sizes are the base; --scale
      multiplies all of them at once, so their ratios never change.
      --scale: 1 = the PDF's own sizes, 2 = twice that. */
-  --scale: 2;
-  /* running copy sits at half the display scale: headings stay large,
-     paragraphs return to a comfortable reading size */
-  --scale-body: calc(var(--scale) * 0.5);
+  /* 2 on desktop, stepped down on smaller screens: a 61px headline over 15px
+     body copy is a 4x jump that overwhelms a phone. Ratios are untouched —
+     every size is derived from --scale. */
+  --scale: 1.35;
+  /* Running copy is deliberately NOT tied to --scale: display type steps down
+     on small screens, but paragraphs must stay at a readable size everywhere.
+     At the desktop --scale of 2 this is half of it, as before. */
+  --scale-body: 1;
   --sans: Helvetica, "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
   /* headings only — Helvetica Neue is listed first because plain Helvetica has
      no Light cut; weight 300 then resolves to Helvetica Neue Light */
@@ -52,6 +56,39 @@
 
   --measure: 66ch;
   --ease: cubic-bezier(0.22, 0.75, 0.28, 1);
+}
+
+@media (min-width: 700px) {
+  :root { --scale: 1.6; }
+}
+
+@media (min-width: 1100px) {
+  :root { --scale: 2; }
+}
+
+/* in-page anchors must clear the sticky header */
+:target {
+  scroll-margin-top: 7rem;
+}
+
+/* keyboard users shouldn't have to tab the whole menu on every page */
+.skip-link {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -120%);
+  z-index: 50;
+  padding: 0.75em 1.5em;
+  background: var(--navy);
+  color: var(--off-white);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  transition: transform 0.25s var(--ease);
+}
+
+.skip-link:focus {
+  transform: translate(-50%, 0);
 }
 
 *,
@@ -421,6 +458,16 @@ h1,
 .site-nav a:focus-visible::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+/* the page you are on */
+.site-nav a[aria-current="page"] {
+  color: var(--accent);
+}
+
+.site-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+  background: var(--accent-soft);
 }
 
 /* the booking link is an action, not a destination */
@@ -1040,6 +1087,11 @@ h1,
   position: relative;
   height: 575px;
   overflow: hidden;
+}
+
+@media (max-width: 699px) {
+  .hero-image {
+    height: 340px;
 }
 
 .hero-image img {
